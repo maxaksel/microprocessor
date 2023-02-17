@@ -9,12 +9,13 @@ module ALU_FSM (
         z_alu_in,
         p_alu_in,
         we_reg_in,
+        br_in,
         pc_ctl_0_out,
         state_out
 );
 
-input wire clka, clkb, reset_in, n_dec_in, z_dec_in, p_dec_in
-            n_alu_in, z_alu_in, p_alu_in, we_reg_in;
+input wire clka, clkb, reset_in, n_dec_in, z_dec_in, p_dec_in,
+            n_alu_in, z_alu_in, p_alu_in, we_reg_in, br_in;
 output wire pc_ctl_0_out;
 output wire [2:0] state_out;
 
@@ -45,7 +46,7 @@ end
 
 always @(negedge clkb) begin
     current_state <= next_state;
-    
+
 end
     
 endmodule
