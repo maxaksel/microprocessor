@@ -11,7 +11,7 @@ module ALU_FSM (
         we_reg_in,
         br_in,
         pc_ctl_0_out,
-        state_out
+        state_out,
 );
 
 input wire clka, clkb, reset_in, n_dec_in, z_dec_in, p_dec_in,
