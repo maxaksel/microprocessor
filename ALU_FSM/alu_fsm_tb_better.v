@@ -1,3 +1,4 @@
+`timescale 1ns/100ps
 module alu_fsm_tb();
 
 reg     in_clka,
@@ -128,6 +129,7 @@ in_clka = 1; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 1; #10;
 
+we_reg_in = 1;
 z_alu_in = 1;
 
 in_clka = 0; in_clkb = 0; #10;
@@ -143,6 +145,7 @@ in_clka = 1; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 1; #10;
 
+we_reg_in = 1;
 p_alu_in = 1;
 
 in_clka = 0; in_clkb = 0; #10;
