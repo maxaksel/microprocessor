@@ -121,6 +121,7 @@ in_clka = 0; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 1; #10;
 
 n_alu_in = 0;
+we_reg_in = 0;
 
 in_clka = 0; in_clkb = 0; #10;
 in_clka = 1; in_clkb = 0; #10;
@@ -135,6 +136,7 @@ in_clka = 0; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 1; #10;
 
 z_alu_in = 0;
+we_reg_in = 0;
 
 in_clka = 0; in_clkb = 0; #10;
 in_clka = 1; in_clkb = 0; #10;
@@ -149,6 +151,7 @@ in_clka = 0; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 1; #10;
 
 p_alu_in = 0;
+we_reg_in = 0;
 
 in_clka = 0; in_clkb = 0; #10;
 in_clka = 1; in_clkb = 0; #10;
@@ -160,6 +163,7 @@ The following test check that the ALU Properly asserts the
 branch out bit when it should
 **/
 
+we_reg_in = 1;
 n_alu_in = 1; //set state to n
 
 in_clka = 0; in_clkb = 0; #10;
@@ -167,6 +171,7 @@ in_clka = 1; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 1; #10;
 
+we_reg_in = 0;
 n_alu_in = 0;
 n_dec_in = 1;
 br_in = 1; //should cause branch
@@ -176,6 +181,7 @@ in_clka = 1; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 1; #10;
 
+we_reg_in = 1;
 z_alu_in = 1;
 n_dec_in = 0;
 br_in = 0;
@@ -185,6 +191,7 @@ in_clka = 1; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 1; #10;
 
+we_reg_in = 0;
 z_alu_in = 0;
 z_dec_in = 1;
 br_in = 1; // should cause branch
@@ -194,6 +201,7 @@ in_clka = 1; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 1; #10;
 
+we_reg_in = 1;
 p_alu_in = 1;
 z_dec_in = 0;
 br_in = 0;
@@ -203,6 +211,7 @@ in_clka = 1; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 1; #10;
 
+we_reg_in = 0;
 p_alu_in = 0;
 p_dec_in = 1;
 br_in = 1; //should cause branch
@@ -217,6 +226,7 @@ in_clka = 0; in_clkb = 1; #10;
 The following tests verify that the branch is asserted soon enough
 **/
 
+we_reg_in = 1;
 n_alu_in = 1;
 n_dec_in = 1;
 p_dec_in = 0;
@@ -240,7 +250,7 @@ in_clka = 0; in_clkb = 1; #10;
 
 p_alu_in = 0;
 p_dec_in = 0;
-z_dec_in = 1;
+z_dec_in = 1; //should cause branch
 z_alu_in = 1;
 
 in_clka = 0; in_clkb = 0; #10;
@@ -248,7 +258,7 @@ in_clka = 1; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 1; #10;
 
-
+we_reg_in = 0; // no branches
 z_dec_in = 0;
 z_alu_in = 0;
 br_in = 0;
@@ -281,7 +291,7 @@ in_clka = 1; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 1; #10;
 
-z_dec_in = 1;
+z_dec_in = 1; // branch should be asserted here
 z_alu_in = 1;
 
 in_clka = 0; in_clkb = 0; #10;
@@ -290,6 +300,7 @@ in_clka = 0; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 1; #10;
 
 //cases when wrong dec asserted
+we_reg_in = 1;
 br_in = 1;
 n_alu_in = 1;
 p_dec_in = 1;
