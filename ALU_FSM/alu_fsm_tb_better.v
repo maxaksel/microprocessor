@@ -372,19 +372,6 @@ in_clka = 0; in_clkb = 1; #10;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 end
+
+endmodule
