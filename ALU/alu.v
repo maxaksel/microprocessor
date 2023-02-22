@@ -10,7 +10,7 @@ module ALU (alu_op, source_sel, ins_immediate, pc, reg_sr1_out, reg_sr2_out, neg
     input wire [7:0] reg_sr1_out;
     input wire [7:0] reg_sr2_out;
 
-    output reg result[7:0];
+    output reg [7:0] result;
     output wire negative, zero, positive;
 
     parameter ADDI = 4'b0000;
