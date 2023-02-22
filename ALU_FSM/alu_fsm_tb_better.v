@@ -73,9 +73,9 @@ in_clka = 0; in_clkb = 1; #10;
  // PC Output here
 
 /**
-The following blocks test that the state is not updated when the we signal is 
-not asserted 
-**/ 
+The following blocks test that the state is not updated when the we signal is
+not asserted
+**/
 
 n_alu_in = 1; // PC Should be static this cycle, FSM Should latch update here
 
@@ -284,7 +284,7 @@ in_clka = 0; in_clkb = 1; #10;
 // PC OUTPUT HERE
 
 /**
-The following test check that the ALU Properly asserts the 
+The following test check that the ALU Properly asserts the
 branch out bit when it should
 **/
 

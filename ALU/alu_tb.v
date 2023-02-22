@@ -1,11 +1,13 @@
+`timescale 1ns/100ps
+
 module alu_tb();
 
-wire [2:0] alu_op;
-wire [2:0] source_sel;
-wire [5:0] ins_immediate;
-wire [5:0] pc;
-wire [7:0] reg_sr1_out;
-wire [7:0] reg_sr2_out;
+reg [2:0] alu_op;
+reg [2:0] source_sel;
+reg [5:0] ins_immediate;
+reg [5:0] pc;
+reg [7:0] reg_sr1_out;
+reg [7:0] reg_sr2_out;
 wire negative, zero, positive;
 wire [7:0] result;
 
@@ -30,7 +32,7 @@ initial
     ins_immediate = 6'b010100;
     pc = 6'b011100;
     reg_sr1_out = 8'b00110100; // decimal:
-    reg_sr2_out = 8'b01001010; // decimal: 
+    reg_sr2_out = 8'b01001010; // decimal:
     #10;
 
 
