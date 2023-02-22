@@ -67,7 +67,7 @@ to the Regfile, since both of them are sequential modules with latches.
     wire [2:0]  br_curr_state, br_next_state;
 
     // internal combo logic
-    assign pc_latch_clkedge = current_state[3]; // this should update on negedge of a PC state
+    assign pc_latch_clkedge = ~current_state[3]; // this should update on negedge of a PC state
     assign state_out = current_state;
     assign alpha     = n_alu_in & ~z_alu_in & ~p_alu_in & we_reg_in;
     assign beta      = ~n_alu_in & z_alu_in & ~p_alu_in & we_reg_in;
@@ -82,9 +82,9 @@ to the Regfile, since both of them are sequential modules with latches.
         br_latch <= br_in;
         dec_in_latch <= {n_dec_in, z_dec_in, p_dec_in};
         case ({alpha, beta, gamma})
-            N : next_state <= N_PC;
-            Z : next_state <= Z_PC;
-            P : next_state <= P_PC;
+            3'b100 : next_state <= N_PC;
+            3'b010 : next_state <= Z_PC;
+            3'b001 : next_state <= P_PC;
             default: next_state <= IDLE_PC;
         endcase
     end
@@ -99,7 +99,7 @@ to the Regfile, since both of them are sequential modules with latches.
                 current_state <= next_state;
                 pc_ctl_0_out <= (|br_next_state) && br_latch;
             end else begin
-                current_state <= {1'b0, current_state[2:0]};
+                current_state <= {1'b1, current_state[2:0]};
             end
         end else begin
             if (current_state[3] == 1'b1) begin // if an NPC Cycle, go to a PC Cycle
@@ -108,7 +108,6 @@ to the Regfile, since both of them are sequential modules with latches.
             end else begin
                 current_state <= {1'b1, current_state[2:0]}; // go to NPC
             end
-            
         end
     end
     

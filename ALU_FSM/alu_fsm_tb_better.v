@@ -31,7 +31,7 @@ ALU_FSM fsm (
         .we_reg_in (we_reg_in),
         .br_in (br_in),
         .pc_ctl_0_out (pc_ctl_0_out),
-        .pc_latch_clkedge(pc_latch_clkedge)
+        .pc_latch_clkedge(pc_latch_clkedge),
         .state_out (state_out)
 );
 
@@ -429,6 +429,8 @@ in_clka = 0; in_clkb = 1; #10;
 
 p_dec_in = 1;
 p_alu_in = 1;
+n_dec_in = 0;
+n_alu_in = 0;
 
 in_clka = 0; in_clkb = 0; #10;
 in_clka = 1; in_clkb = 0; #10;
@@ -444,6 +446,9 @@ in_clka = 0; in_clkb = 1; #10;
 
 z_dec_in = 1; // branch should not be asserted here
 z_alu_in = 1;
+p_dec_in = 0;
+p_alu_in = 0;
+
 
 in_clka = 0; in_clkb = 0; #10;
 in_clka = 1; in_clkb = 0; #10;
@@ -458,6 +463,7 @@ in_clka = 0; in_clkb = 1; #10;
 // PC OUTPUT HERE
 
 //cases when wrong dec asserted
+z_alu_in = 0;
 we_reg_in = 1;
 br_in = 1;
 n_alu_in = 1;
