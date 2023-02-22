@@ -5,7 +5,7 @@
 module ALU (alu_op, source_sel, ins_immediate, pc, reg_sr1_out, reg_sr2_out, negative, zero, positive, result);
     input wire [1:0] alu_op;
     input wire [1:0] source_sel;
-    input wire [5:0] ins_immediate
+    input wire [5:0] ins_immediate;
     input wire [5:0] pc; // PC is six bits
     input wire [7:0] reg_sr1_out;
     input wire [7:0] reg_sr2_out;
