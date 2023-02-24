@@ -137,6 +137,19 @@ in_clka = 1; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 1; #10;
 
+// cycle 3
+reset_in = 0;
+pc_latch_clk = 1;
+we_reg_in = 1;
+data_in = 3;
+sr1_in = 1;
+sr2_in = 2;
+rd_in = 3;
+in_clka = 0; in_clkb = 0; #10;
+in_clka = 1; in_clkb = 0; #10;
+in_clka = 0; in_clkb = 0; #10;
+in_clka = 0; in_clkb = 1; #10;
+
 
 $dumpfile ("regfile_tb.vcd"); 
 $dumpvars; 
