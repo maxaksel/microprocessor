@@ -44,7 +44,7 @@ integer i;
 always @(negedge clkb) begin
     if (reset_latch == 1) begin
         for (i = 0; i < 8; i = i + 1) begin
-            regfile[i] = 0;
+            regfile[i] <= 0;
         end
     end else if (pc_latch == 0 && we_reg_latch == 1) begin
         regfile[rd_latch] <= data_latch;
