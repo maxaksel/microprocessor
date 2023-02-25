@@ -14,7 +14,6 @@ module INSMEM(clka, clkb, we_insmem, pc, instruction_in, instruction_out);
         reg [PC_BITS - 1:0] pc_latch;
         reg [15:0] insmem_regs [(2 ** PC_BITS) - 2 : 0]; // 2**PC_BITS array of memory
 
-
         always @(*) begin
                 if (we_insmem) begin
                         instruction_out = 16'b0;
@@ -23,11 +22,13 @@ module INSMEM(clka, clkb, we_insmem, pc, instruction_in, instruction_out);
                 end
         end
 
+
         always @(negedge clka) begin
                 we_insmem_latch <= we_insmem;
                 instruction_in_latch <= instruction_in;
                 pc_latch <= pc;
         end
+
 
         always @(negedge clkb) begin
                 for (i = 0; i < (2** (PC_BITS - 1)); i  = i + 1) begin
@@ -39,7 +40,6 @@ module INSMEM(clka, clkb, we_insmem, pc, instruction_in, instruction_out);
                         end
                 end
         end
-
 
 
 endmodule
