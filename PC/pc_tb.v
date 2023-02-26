@@ -1,6 +1,6 @@
 `timescale 1ns/100ps
 
-module pc_tb()
+module pc_tb();
 
         parameter PC_BITS = 6;
 
@@ -47,15 +47,42 @@ module pc_tb()
                 clka = 0; clkb = 0; #10;
                 clka = 0; clkb = 1; #10; // test reset
 
+                reset = 0;
+
+                clka = 0; clkb = 0; #10;
+                clka = 1; clkb = 0; #10;
+                clka = 0; clkb = 0; #10;
+                clka = 0; clkb = 1; #10;
+
+                pc_latch_data = 1;
+
+                clka = 0; clkb = 0; #10;
+                clka = 1; clkb = 0; #10;
+                clka = 0; clkb = 0; #10;
+                clka = 0; clkb = 1; #10;
+                // PC UPDATE HERE
+
                 // the point of this is to test iterating through the entire range of PC values
-                for (i = 2; i < PC_BITS ** 2; i = i + 1) begin
+                for (i = 2; i < PC_BITS ** 2; i = i + 2) begin
+
+                        pc_latch_data = 0;
                         
                         clka = 0; clkb = 0; #10;
                         clka = 1; clkb = 0; #10;
                         clka = 0; clkb = 0; #10;
                         clka = 0; clkb = 1; #10;
 
+                        pc_latch_data = 1;
+
+                        clka = 0; clkb = 0; #10;
+                        clka = 1; clkb = 0; #10;
+                        clka = 0; clkb = 0; #10;
+                        clka = 0; clkb = 1; #10;
+                        // PC UPDATE HERE
+
                 end
+
+                pc_latch_data = 0;
 
                 clka = 0; clkb = 0; #10;
                 clka = 1; clkb = 0; #10;
@@ -63,7 +90,7 @@ module pc_tb()
                 clka = 0; clkb = 1; #10;
 
 
-                $dumpfile ("insmem_tb.vcd");
+                $dumpfile ("pc_tb.vcd");
                 $dumpvars;
                 $stop;
 
