@@ -2,7 +2,7 @@
 
 module alu_tb();
 
-reg [2:0] alu_op;
+reg [1:0] alu_op;
 reg [2:0] source_sel;
 reg [5:0] ins_immediate;
 reg [5:0] pc;
