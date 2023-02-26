@@ -3,20 +3,22 @@
 */
 
 module PC(clka, clkb, reset, pc_latch_data, pc_ctl, imm, sr1_val, pc_out);
+        //module param
+        parameter PC_BITS = 6; // 64 bytes of memory (32 words)
+        
         input clka; // clock a in
         input clkb; // clock b in
         input reset; // reset signal in
         input pc_latch_data; // signal from FSM in
         input [1:0] pc_ctl; // decides next pc source
         input [PC_BITS - 1:0] imm; // immediate input 
-        input [PC_BITS:0] sr1_val; // input value from source reg 1
+        input [PC_BITS - 1:0] sr1_val; // input value from source reg 1
 
         // output wire
         output pc_out;
         wire [PC_BITS - 1:0] pc_out;
 
-        //module param
-        parameter PC_BITS = 6; // 64 bytes of memory (32 words)
+        
 
         //internal signals
         reg [PC_BITS - 1:0] pc_reg;
@@ -54,7 +56,7 @@ module PC(clka, clkb, reset, pc_latch_data, pc_ctl, imm, sr1_val, pc_out);
                 end else if (pc_latch_data_latch == 1'b1) begin
                         case (pc_ctl_latch)
                                 2'b01 : next_pc = pc_plus_imm;
-                                2'b10 : next_pc = sr1_val_latch;
+                                2'b10 : next_pc = sr1_val_latch[PC_BITS - 1:0];
                                 default : next_pc = pc_plus_2;
                         endcase
                 end else begin
