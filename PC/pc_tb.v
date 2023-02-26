@@ -10,7 +10,7 @@ module pc_tb()
         reg pc_latch_data;
         reg [1:0] pc_ctl;
         reg [PC_BITS - 1: 0] imm;
-        reg [7:0] sr1_val;
+        reg [PC_BITS - 1:0] sr1_val;
         integer i; // counter
 
         wire pc_out;
@@ -45,9 +45,10 @@ module pc_tb()
                 clka = 0; clkb = 0; #10;
                 clka = 1; clkb = 0; #10;
                 clka = 0; clkb = 0; #10;
-                clka = 0; clkb = 1; #10;
+                clka = 0; clkb = 1; #10; // test reset
 
-                for (i = 2; i < PC_BITS ** 2; i = i + 2) begin
+                // the point of this is to test iterating through the entire range of PC values
+                for (i = 2; i < PC_BITS ** 2; i = i + 1) begin
                         
                         clka = 0; clkb = 0; #10;
                         clka = 1; clkb = 0; #10;
@@ -55,6 +56,11 @@ module pc_tb()
                         clka = 0; clkb = 1; #10;
 
                 end
+
+                clka = 0; clkb = 0; #10;
+                clka = 1; clkb = 0; #10;
+                clka = 0; clkb = 0; #10;
+                clka = 0; clkb = 1; #10;
 
 
                 $dumpfile ("insmem_tb.vcd");
