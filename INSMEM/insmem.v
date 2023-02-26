@@ -1,4 +1,6 @@
 module INSMEM(clka, clkb, we_insmem, pc, instruction_in, instruction_out);
+        parameter PC_BITS = 6; // number of bits in PC, decides size of memory array
+
         input clka;
         input clkb;
         input we_insmem;
@@ -6,8 +8,7 @@ module INSMEM(clka, clkb, we_insmem, pc, instruction_in, instruction_out);
         input [15:0] instruction_in;
         output [15:0] instruction_out; // combinational instruction out
 
-        parameter PC_BITS = 6; // number of bits in PC, decides size of memory array
-
+        integer i;
         reg [15:0] instruction_out;
         reg [15:0] instruction_in_latch;
         reg we_insmem_latch;
