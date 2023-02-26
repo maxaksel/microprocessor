@@ -1,0 +1,50 @@
+###################################################################
+
+# Created by write_sdc on Sun Feb 26 13:08:06 2023
+
+###################################################################
+set sdc_version 2.0
+
+set_units -time ns -resistance kOhm -capacitance pF -voltage V -current uA
+set_driving_cell -lib_cell INVX1 [get_ports clka]
+set_driving_cell -lib_cell INVX1 [get_ports clkb]
+set_driving_cell -lib_cell INVX1 [get_ports reset]
+set_driving_cell -lib_cell INVX1 [get_ports pc_latch_data]
+set_driving_cell -lib_cell INVX1 [get_ports {pc_ctl[1]}]
+set_driving_cell -lib_cell INVX1 [get_ports {pc_ctl[0]}]
+set_driving_cell -lib_cell INVX1 [get_ports {imm[5]}]
+set_driving_cell -lib_cell INVX1 [get_ports {imm[4]}]
+set_driving_cell -lib_cell INVX1 [get_ports {imm[3]}]
+set_driving_cell -lib_cell INVX1 [get_ports {imm[2]}]
+set_driving_cell -lib_cell INVX1 [get_ports {imm[1]}]
+set_driving_cell -lib_cell INVX1 [get_ports {imm[0]}]
+set_driving_cell -lib_cell INVX1 [get_ports {sr1_val[5]}]
+set_driving_cell -lib_cell INVX1 [get_ports {sr1_val[4]}]
+set_driving_cell -lib_cell INVX1 [get_ports {sr1_val[3]}]
+set_driving_cell -lib_cell INVX1 [get_ports {sr1_val[2]}]
+set_driving_cell -lib_cell INVX1 [get_ports {sr1_val[1]}]
+set_driving_cell -lib_cell INVX1 [get_ports {sr1_val[0]}]
+create_clock [get_ports clka]  -period 50  -waveform {0 25}
+set_input_delay -clock clka  1  [get_ports clkb]
+set_input_delay -clock clka  1  [get_ports reset]
+set_input_delay -clock clka  1  [get_ports pc_latch_data]
+set_input_delay -clock clka  1  [get_ports {pc_ctl[1]}]
+set_input_delay -clock clka  1  [get_ports {pc_ctl[0]}]
+set_input_delay -clock clka  1  [get_ports {imm[5]}]
+set_input_delay -clock clka  1  [get_ports {imm[4]}]
+set_input_delay -clock clka  1  [get_ports {imm[3]}]
+set_input_delay -clock clka  1  [get_ports {imm[2]}]
+set_input_delay -clock clka  1  [get_ports {imm[1]}]
+set_input_delay -clock clka  1  [get_ports {imm[0]}]
+set_input_delay -clock clka  1  [get_ports {sr1_val[5]}]
+set_input_delay -clock clka  1  [get_ports {sr1_val[4]}]
+set_input_delay -clock clka  1  [get_ports {sr1_val[3]}]
+set_input_delay -clock clka  1  [get_ports {sr1_val[2]}]
+set_input_delay -clock clka  1  [get_ports {sr1_val[1]}]
+set_input_delay -clock clka  1  [get_ports {sr1_val[0]}]
+set_output_delay -clock clka  1  [get_ports {pc_out[5]}]
+set_output_delay -clock clka  1  [get_ports {pc_out[4]}]
+set_output_delay -clock clka  1  [get_ports {pc_out[3]}]
+set_output_delay -clock clka  1  [get_ports {pc_out[2]}]
+set_output_delay -clock clka  1  [get_ports {pc_out[1]}]
+set_output_delay -clock clka  1  [get_ports {pc_out[0]}]
