@@ -1,5 +1,10 @@
 /* ALU Module
- * @date 2/21/2023
+ *
+ * Supports AND, NOT, and ADD instructions. First argument always comes from
+ * general purpose register file while second argument can be either an
+ * immediate operand, the PC, or another register.
+ *
+ * @date 2/26/2023
  */
 
 module ALU (alu_op, source_sel, ins_immediate, pc, reg_sr1_out, reg_sr2_out, negative, zero, positive, result);
@@ -28,28 +33,28 @@ module ALU (alu_op, source_sel, ins_immediate, pc, reg_sr1_out, reg_sr2_out, neg
     always @(*) begin
       case ({alu_op, source_sel})
         ADDI: begin
-            result <= reg_sr1_out + {3'b000, ins_immediate[4:0]};
+            result <= reg_sr1_out + {ins_immediate[4], ins_immediate[4], ins_immediate[4], ins_immediate[4:0]};
           end
         ADD: begin
             result <= reg_sr1_out + reg_sr2_out;
           end
         ANDI: begin
-            result <= reg_sr1_out & {3'b000, ins_immediate[4:0]};
+            result <= reg_sr1_out & {ins_immediate[4], ins_immediate[4], ins_immediate[4], ins_immediate[4:0]};
           end
         AND: begin
             result <= reg_sr1_out & reg_sr2_out;
           end
         NOTI: begin
-            result <= ~{3'b000, ins_immediate[4:0]};
+            result <= ~{ins_immediate[4], ins_immediate[4], ins_immediate[4], ins_immediate[4:0]};
           end
         NOT: begin
             result <= ~reg_sr1_out;
           end
         LEA: begin
-            result <= {2'b00, pc + ins_immediate};
+            result <= {ins_immediate[5], ins_immediate[5], pc + ins_immediate}; // immediate for LEA is 6 bits
           end
         default: begin
-            result <= 8'b00000000; // should never happen
+            result <= 8'b00000000; // output does not matter here
           end
       endcase
     end
