@@ -1,4 +1,4 @@
-module regfile (
+module REGFILE (
     clka,
     clkb,
     pc_latch_clk,

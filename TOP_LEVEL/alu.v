@@ -7,7 +7,7 @@
  * @date 2/26/2023
  */
 
-module alu (alu_op, source_sel, ins_immediate, pc, reg_sr1_out, reg_sr2_out, negative, zero, positive, result);
+module ALU (alu_op, source_sel, ins_immediate, pc, reg_sr1_out, reg_sr2_out, negative, zero, positive, result);
     input wire [1:0] alu_op;
     input wire [1:0] source_sel;
     input wire [5:0] ins_immediate;

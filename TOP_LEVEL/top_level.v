@@ -23,7 +23,7 @@ wire        n_dec, z_dec, p_dec, n_alu, z_alu, p_alu, we_reg, br, pc_lat_clk;
 wire [1:0]  alu_op, sslt, pc_ctl;
 
 //---------------Module Instantiations-----------------//
-decoder decoder_m(  // TODO: need instruction mem
+DECODER decoder_m(  // TODO: need instruction mem
     .instruction(instr),
     .negative(n_dec),
     .zero(z_dec),
@@ -34,7 +34,7 @@ decoder decoder_m(  // TODO: need instruction mem
     .ssel(sslt)
 );
 
-alu_fsm alu_fsm_m(  // TODO: what about pc_ctl[1]??
+ALU_FSM alu_fsm_m(  // TODO: what about pc_ctl[1]??
     .clka(clka),
     .clkb(clkb),
     .reset_in(reset),
@@ -50,7 +50,7 @@ alu_fsm alu_fsm_m(  // TODO: what about pc_ctl[1]??
     .pc_latch_clkedge(pc_lat_clk)
 );
 
-alu alu_m(  // TODO: Need PC
+ALU alu_m(  // TODO: Need PC
     .alu_op(alu_op),
     .source_sel(sslt),
     .ins_immediate(immed),  // TODO: How many bits is instruction immediate??
@@ -63,7 +63,7 @@ alu alu_m(  // TODO: Need PC
     .result(reg_data_in)
 );
 
-regfile regfile_m(  // TODO: Need to get signals for sr1in, sr2in, and rdin from decode
+REGFILE regfile_m(  // TODO: Need to get signals for sr1in, sr2in, and rdin from decode
     .clka(clka),
     .clkb(clkb),
     .pc_latch_clk(pc_lat_clk),
@@ -78,15 +78,23 @@ regfile regfile_m(  // TODO: Need to get signals for sr1in, sr2in, and rdin from
     .reg0_out(reg_0_out)
 );
 
-pc pc_m(
+PC pc_m(
     .clka(clka),
     .clkb(clkb),
-    .pc_lat_clk(pc_lat_clk),
-    .reset_in(reset),
-    .immed_in(immed),
-    .sr1_out_in(sr1_out),
+    .pc_latch_data(pc_lat_clk),  // TODO: need to confirm connection
+    .reset(reset),
+    .imm(immed),
+    .sr1_val(sr1_out),    // TODO: need to figure out the bits
     .pc_out(pc)
 );
 
+INSMEM insmem_m(
+    .clka(clka),
+    .clkb(clkb),
+    .we_insmem(we_ins),
+    .pc(pc),
+    .instruction_in(load),
+    .instruction_out(instr)
+);
 
 endmodule

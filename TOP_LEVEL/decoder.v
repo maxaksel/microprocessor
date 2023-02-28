@@ -8,7 +8,7 @@
  * @date 2/26/2023
  */
 
-module decoder (instruction, negative, zero, positive, we_reg, branch, alu_op, ssel);
+module DECODER (instruction, negative, zero, positive, we_reg, branch, alu_op, ssel);
     input wire [15:0] instruction;
 
     output wire [1:0] alu_op;
