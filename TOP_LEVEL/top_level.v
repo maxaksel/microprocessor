@@ -22,6 +22,12 @@ wire [2:0]  sr1_slt, sr2_slt, rd_slt;
 wire        n_dec, z_dec, p_dec, n_alu, z_alu, p_alu, we_reg, br, pc_lat_clk;
 wire [1:0]  alu_op, sslt, pc_ctl;
 
+
+//Forgot to assign immediate
+// its not in the decoder, its supposed to be done by toplevel
+
+assign immed = instr[5:0];
+
 //---------------Module Instantiations-----------------//
 DECODER decoder_m(
     .instruction(instr),
@@ -88,6 +94,7 @@ PC pc_m(
     .pc_latch_data(pc_lat_clk),
     .reset(reset),
     .imm(immed),
+    .pc_ctl(pc_ctl),
     .sr1_val(sr1_out[5:0]),
     .pc_out(pc)
 );

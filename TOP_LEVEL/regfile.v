@@ -42,7 +42,7 @@ end
 
 integer i;
 always @(negedge clkb) begin
-    if (reset_latch == 1) begin
+    if (reset_latch == 1'b1) begin
         for (i = 0; i < 8; i = i + 1) begin
             regfile[i] <= 0;
         end

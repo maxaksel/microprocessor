@@ -1,0 +1,281 @@
+$date
+	Tue Feb 28 14:53:02 2023
+$end
+$version
+	ModelSim Version 10.7
+$end
+$timescale
+	100ps
+$end
+
+$scope module toplevel_testbench $end
+$var reg 1 ! clka $end
+$var reg 1 " clkb $end
+$var reg 1 # reset $end
+$var reg 1 $ we_ins $end
+$var reg 16 % instruction_load [15:0] $end
+$var wire 1 & reg_0_out [7] $end
+$var wire 1 ' reg_0_out [6] $end
+$var wire 1 ( reg_0_out [5] $end
+$var wire 1 ) reg_0_out [4] $end
+$var wire 1 * reg_0_out [3] $end
+$var wire 1 + reg_0_out [2] $end
+$var wire 1 , reg_0_out [1] $end
+$var wire 1 - reg_0_out [0] $end
+
+$scope module my_toplevel $end
+$var wire 1 . clka $end
+$var wire 1 / clkb $end
+$var wire 1 0 reset $end
+$var wire 1 1 we_ins $end
+$var wire 1 2 load [15] $end
+$var wire 1 3 load [14] $end
+$var wire 1 4 load [13] $end
+$var wire 1 5 load [12] $end
+$var wire 1 6 load [11] $end
+$var wire 1 7 load [10] $end
+$var wire 1 8 load [9] $end
+$var wire 1 9 load [8] $end
+$var wire 1 : load [7] $end
+$var wire 1 ; load [6] $end
+$var wire 1 < load [5] $end
+$var wire 1 = load [4] $end
+$var wire 1 > load [3] $end
+$var wire 1 ? load [2] $end
+$var wire 1 @ load [1] $end
+$var wire 1 A load [0] $end
+$var wire 1 & reg_0_out [7] $end
+$var wire 1 ' reg_0_out [6] $end
+$var wire 1 ( reg_0_out [5] $end
+$var wire 1 ) reg_0_out [4] $end
+$var wire 1 * reg_0_out [3] $end
+$var wire 1 + reg_0_out [2] $end
+$var wire 1 , reg_0_out [1] $end
+$var wire 1 - reg_0_out [0] $end
+$var wire 1 B instr [15] $end
+$var wire 1 C instr [14] $end
+$var wire 1 D instr [13] $end
+$var wire 1 E instr [12] $end
+$var wire 1 F instr [11] $end
+$var wire 1 G instr [10] $end
+$var wire 1 H instr [9] $end
+$var wire 1 I instr [8] $end
+$var wire 1 J instr [7] $end
+$var wire 1 K instr [6] $end
+$var wire 1 L instr [5] $end
+$var wire 1 M instr [4] $end
+$var wire 1 N instr [3] $end
+$var wire 1 O instr [2] $end
+$var wire 1 P instr [1] $end
+$var wire 1 Q instr [0] $end
+$var wire 1 R sr1_out [7] $end
+$var wire 1 S sr1_out [6] $end
+$var wire 1 T sr1_out [5] $end
+$var wire 1 U sr1_out [4] $end
+$var wire 1 V sr1_out [3] $end
+$var wire 1 W sr1_out [2] $end
+$var wire 1 X sr1_out [1] $end
+$var wire 1 Y sr1_out [0] $end
+$var wire 1 Z sr2_out [7] $end
+$var wire 1 [ sr2_out [6] $end
+$var wire 1 \ sr2_out [5] $end
+$var wire 1 ] sr2_out [4] $end
+$var wire 1 ^ sr2_out [3] $end
+$var wire 1 _ sr2_out [2] $end
+$var wire 1 ` sr2_out [1] $end
+$var wire 1 a sr2_out [0] $end
+$var wire 1 b reg_data_in [7] $end
+$var wire 1 c reg_data_in [6] $end
+$var wire 1 d reg_data_in [5] $end
+$var wire 1 e reg_data_in [4] $end
+$var wire 1 f reg_data_in [3] $end
+$var wire 1 g reg_data_in [2] $end
+$var wire 1 h reg_data_in [1] $end
+$var wire 1 i reg_data_in [0] $end
+$var wire 1 j immed [5] $end
+$var wire 1 k immed [4] $end
+$var wire 1 l immed [3] $end
+$var wire 1 m immed [2] $end
+$var wire 1 n immed [1] $end
+$var wire 1 o immed [0] $end
+$var wire 1 p pc [5] $end
+$var wire 1 q pc [4] $end
+$var wire 1 r pc [3] $end
+$var wire 1 s pc [2] $end
+$var wire 1 t pc [1] $end
+$var wire 1 u pc [0] $end
+$var wire 1 v sr1_slt [2] $end
+$var wire 1 w sr1_slt [1] $end
+$var wire 1 x sr1_slt [0] $end
+$var wire 1 y sr2_slt [2] $end
+$var wire 1 z sr2_slt [1] $end
+$var wire 1 { sr2_slt [0] $end
+$var wire 1 | rd_slt [2] $end
+$var wire 1 } rd_slt [1] $end
+$var wire 1 ~ rd_slt [0] $end
+$var wire 1 !! n_dec $end
+$var wire 1 "! z_dec $end
+$var wire 1 #! p_dec $end
+$var wire 1 $! n_alu $end
+$var wire 1 %! z_alu $end
+$var wire 1 &! p_alu $end
+$var wire 1 '! we_reg $end
+$var wire 1 (! br $end
+$var wire 1 )! pc_lat_clk $end
+$var wire 1 *! alu_op [1] $end
+$var wire 1 +! alu_op [0] $end
+$var wire 1 ,! sslt [1] $end
+$var wire 1 -! sslt [0] $end
+$var wire 1 .! pc_ctl [1] $end
+$var wire 1 /! pc_ctl [0] $end
+
+$scope module decoder_m $end
+$var parameter 4 0! ADD $end
+$var parameter 4 1! NOT $end
+$var parameter 4 2! AND $end
+$var parameter 4 3! JMP $end
+$var parameter 4 4! LEA $end
+$var parameter 4 5! BR $end
+$var wire 1 B instruction [15] $end
+$var wire 1 C instruction [14] $end
+$var wire 1 D instruction [13] $end
+$var wire 1 E instruction [12] $end
+$var wire 1 F instruction [11] $end
+$var wire 1 G instruction [10] $end
+$var wire 1 H instruction [9] $end
+$var wire 1 I instruction [8] $end
+$var wire 1 J instruction [7] $end
+$var wire 1 K instruction [6] $end
+$var wire 1 L instruction [5] $end
+$var wire 1 M instruction [4] $end
+$var wire 1 N instruction [3] $end
+$var wire 1 O instruction [2] $end
+$var wire 1 P instruction [1] $end
+$var wire 1 Q instruction [0] $end
+$var wire 1 *! alu_op [1] $end
+$var wire 1 +! alu_op [0] $end
+$var reg 2 6! ssel [1:0] $end
+$var wire 1 '! we_reg $end
+$var wire 1 (! branch $end
+$var wire 1 !! negative $end
+$var wire 1 "! zero $end
+$var wire 1 #! positive $end
+$var wire 1 v sr1 [2] $end
+$var wire 1 w sr1 [1] $end
+$var wire 1 x sr1 [0] $end
+$var wire 1 y sr2 [2] $end
+$var wire 1 z sr2 [1] $end
+$var wire 1 { sr2 [0] $end
+$var wire 1 | dr [2] $end
+$var wire 1 } dr [1] $end
+$var wire 1 ~ dr [0] $end
+$var wire 1 .! pc_ctrl_1 $end
+$upscope $end
+
+$scope module alu_fsm_m $end
+$var parameter 4 7! IDLE_PC $end
+$var parameter 4 8! P_PC $end
+$var parameter 4 9! Z_PC $end
+$var parameter 4 :! N_PC $end
+$var parameter 4 ;! IDLE_NPC $end
+$var parameter 4 <! P_NPC $end
+$var parameter 4 =! Z_NPC $end
+$var parameter 4 >! N_NPC $end
+$var wire 1 . clka $end
+$var wire 1 / clkb $end
+$var wire 1 0 reset_in $end
+$var wire 1 !! n_dec_in $end
+$var wire 1 "! z_dec_in $end
+$var wire 1 #! p_dec_in $end
+$var wire 1 $! n_alu_in $end
+$var wire 1 %! z_alu_in $end
+$var wire 1 &! p_alu_in $end
+$var wire 1 '! we_reg_in $end
+$var wire 1 (! br_in $end
+$var reg 1 ?! pc_ctl_0_out $end
+$var wire 1 )! pc_latch_clkedge $end
+$var wire 1 @! state_out [3] $end
+$var wire 1 A! state_out [2] $end
+$var wire 1 B! state_out [1] $end
+$var wire 1 C! state_out [0] $end
+$var wire 1 D! alpha $end
+$var wire 1 E! beta $end
+$var wire 1 F! gamma $end
+$var reg 4 G! current_state [3:0] $end
+$var reg 4 H! next_state [3:0] $end
+$var reg 1 I! we_latch $end
+$var reg 1 J! reset_latch $end
+$var reg 1 K! br_latch $end
+$var reg 3 L! dec_in_latch [2:0] $end
+$var wire 1 M! br_curr_state [2] $end
+$var wire 1 N! br_curr_state [1] $end
+$var wire 1 O! br_curr_state [0] $end
+$var wire 1 P! br_next_state [2] $end
+$var wire 1 Q! br_next_state [1] $end
+$var wire 1 R! br_next_state [0] $end
+$upscope $end
+
+$scope module alu_m $end
+$var parameter 4 S! ADDI $end
+$var parameter 4 T! ADD $end
+$var parameter 4 U! LEA $end
+$var parameter 4 V! ANDI $end
+$var parameter 4 W! AND $end
+$var parameter 4 X! NOTI $end
+$var parameter 4 Y! NOT $end
+$var wire 1 *! alu_op [1] $end
+$var wire 1 +! alu_op [0] $end
+$var wire 1 ,! source_sel [1] $end
+$var wire 1 -! source_sel [0] $end
+$var wire 1 j ins_immediate [5] $end
+$var wire 1 k ins_immediate [4] $end
+$var wire 1 l ins_immediate [3] $end
+$var wire 1 m ins_immediate [2] $end
+$var wire 1 n ins_immediate [1] $end
+$var wire 1 o ins_immediate [0] $end
+$var wire 1 p pc [5] $end
+$var wire 1 q pc [4] $end
+$var wire 1 r pc [3] $end
+$var wire 1 s pc [2] $end
+$var wire 1 t pc [1] $end
+$var wire 1 u pc [0] $end
+$var wire 1 R reg_sr1_out [7] $end
+$var wire 1 S reg_sr1_out [6] $end
+$var wire 1 T reg_sr1_out [5] $end
+$var wire 1 U reg_sr1_out [4] $end
+$var wire 1 V reg_sr1_out [3] $end
+$var wire 1 W reg_sr1_out [2] $end
+$var wire 1 X reg_sr1_out [1] $end
+$var wire 1 Y reg_sr1_out [0] $end
+$var wire 1 Z reg_sr2_out [7] $end
+$var wire 1 [ reg_sr2_out [6] $end
+$var wire 1 \ reg_sr2_out [5] $end
+$var wire 1 ] reg_sr2_out [4] $end
+$var wire 1 ^ reg_sr2_out [3] $end
+$var wire 1 _ reg_sr2_out [2] $end
+$var wire 1 ` reg_sr2_out [1] $end
+$var wire 1 a reg_sr2_out [0] $end
+$var reg 8 Z! result [7:0] $end
+$var wire 1 $! negative $end
+$var wire 1 %! zero $end
+$var wire 1 &! positive $end
+$upscope $end
+
+$scope module regfile_m $end
+$var wire 1 . clka $end
+$var wire 1 / clkb $end
+$var wire 1 )! pc_latch_clk $end
+$var wire 1 '! we_reg_in $end
+$var wire 1 0 reset_in $end
+$var wire 1 v sr1_in [2] $end
+$var wire 1 w sr1_in [1] $end
+$var wire 1 x sr1_in [0] $end
+$var wire 1 y sr2_in [2] $end
+$var wire 1 z sr2_in [1] $end
+$var wire 1 { sr2_in [0] $end
+$var wire 1 | rd_in [2] $end
+$var wire 1 } rd_in [1] $end
+$var wire 1 ~ rd_in [0] $end
+$var wire 1 b data_in [7] $end
+$var wire 1 c data_in [6] $end
+$var wire 1 d

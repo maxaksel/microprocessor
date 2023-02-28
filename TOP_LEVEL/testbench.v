@@ -16,7 +16,7 @@ module toplevel_testbench();
                                 .load(instruction_load),
                                 .reg_0_out(reg_0_out));
 
-        initial begin'
+        initial begin
 
                 reset = 0;
                 we_ins = 0;
@@ -248,7 +248,139 @@ module toplevel_testbench();
                 clka = 0; clkb = 0; #10;
                 clka = 0; clkb = 1; #10;
 
-                // STOP, loop should still be in progress here
+                // PC = 8
+
+                clka = 0; clkb = 0; #10;
+                clka = 1; clkb = 0; #10;
+                clka = 0; clkb = 0; #10;
+                clka = 0; clkb = 1; #10;
+
+                clka = 0; clkb = 0; #10;
+                clka = 1; clkb = 0; #10;
+                clka = 0; clkb = 0; #10;
+                clka = 0; clkb = 1; #10;
+
+                // PC = 10
+
+                clka = 0; clkb = 0; #10;
+                clka = 1; clkb = 0; #10;
+                clka = 0; clkb = 0; #10;
+                clka = 0; clkb = 1; #10;
+
+                clka = 0; clkb = 0; #10;
+                clka = 1; clkb = 0; #10;
+                clka = 0; clkb = 0; #10;
+                clka = 0; clkb = 1; #10;
+
+                // PC = 8
+
+                clka = 0; clkb = 0; #10;
+                clka = 1; clkb = 0; #10;
+                clka = 0; clkb = 0; #10;
+                clka = 0; clkb = 1; #10;
+
+                clka = 0; clkb = 0; #10;
+                clka = 1; clkb = 0; #10;
+                clka = 0; clkb = 0; #10;
+                clka = 0; clkb = 1; #10;
+
+                // PC = 10
+
+                clka = 0; clkb = 0; #10;
+                clka = 1; clkb = 0; #10;
+                clka = 0; clkb = 0; #10;
+                clka = 0; clkb = 1; #10;
+
+                clka = 0; clkb = 0; #10;
+                clka = 1; clkb = 0; #10;
+                clka = 0; clkb = 0; #10;
+                clka = 0; clkb = 1; #10;
+
+                // PC = 8
+
+                clka = 0; clkb = 0; #10;
+                clka = 1; clkb = 0; #10;
+                clka = 0; clkb = 0; #10;
+                clka = 0; clkb = 1; #10;
+
+                clka = 0; clkb = 0; #10;
+                clka = 1; clkb = 0; #10;
+                clka = 0; clkb = 0; #10;
+                clka = 0; clkb = 1; #10;
+
+                // PC = 10
+
+                clka = 0; clkb = 0; #10;
+                clka = 1; clkb = 0; #10;
+                clka = 0; clkb = 0; #10;
+                clka = 0; clkb = 1; #10;
+
+                clka = 0; clkb = 0; #10;
+                clka = 1; clkb = 0; #10;
+                clka = 0; clkb = 0; #10;
+                clka = 0; clkb = 1; #10;
+
+                // PC = 8
+
+                clka = 0; clkb = 0; #10;
+                clka = 1; clkb = 0; #10;
+                clka = 0; clkb = 0; #10;
+                clka = 0; clkb = 1; #10;
+
+                clka = 0; clkb = 0; #10;
+                clka = 1; clkb = 0; #10;
+                clka = 0; clkb = 0; #10;
+                clka = 0; clkb = 1; #10;
+
+                // PC = 10
+
+                clka = 0; clkb = 0; #10;
+                clka = 1; clkb = 0; #10;
+                clka = 0; clkb = 0; #10;
+                clka = 0; clkb = 1; #10;
+
+                clka = 0; clkb = 0; #10;
+                clka = 1; clkb = 0; #10;
+                clka = 0; clkb = 0; #10;
+                clka = 0; clkb = 1; #10;
+
+                // PC = 8
+
+                clka = 0; clkb = 0; #10;
+                clka = 1; clkb = 0; #10;
+                clka = 0; clkb = 0; #10;
+                clka = 0; clkb = 1; #10;
+
+                clka = 0; clkb = 0; #10;
+                clka = 1; clkb = 0; #10;
+                clka = 0; clkb = 0; #10;
+                clka = 0; clkb = 1; #10;
+
+                // PC = 10
+
+                clka = 0; clkb = 0; #10;
+                clka = 1; clkb = 0; #10;
+                clka = 0; clkb = 0; #10;
+                clka = 0; clkb = 1; #10;
+
+                clka = 0; clkb = 0; #10;
+                clka = 1; clkb = 0; #10;
+                clka = 0; clkb = 0; #10;
+                clka = 0; clkb = 1; #10;
+
+                // PC = 12
+
+                clka = 0; clkb = 0; #10;
+                clka = 1; clkb = 0; #10;
+                clka = 0; clkb = 0; #10;
+                clka = 0; clkb = 1; #10;
+
+                clka = 0; clkb = 0; #10;
+                clka = 1; clkb = 0; #10;
+                clka = 0; clkb = 0; #10;
+                clka = 0; clkb = 1; #10;
+
+                // STOP
                 
 
                 $dumpfile ("toplelevel_testbench.vcd");
