@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////
 // Created by: Synopsys DC Expert(TM) in wire load mode
 // Version   : N-2017.09-SP2
-// Date      : Wed Feb 22 10:09:59 2023
+// Date      : Sun Feb 26 13:27:58 2023
 /////////////////////////////////////////////////////////////
 
 
@@ -65,7 +65,7 @@ module ALU_FSM ( clka, clkb, reset_in, n_dec_in, z_dec_in, p_dec_in, n_alu_in,
   OAI22X1 U29 ( .A(n9), .B(n23), .C(n1), .D(n24), .Y(n35) );
   NAND2X1 U30 ( .A(n23), .B(n5), .Y(n24) );
   OAI21X1 U31 ( .A(pc_latch_clkedge), .B(n4), .C(n5), .Y(n23) );
-  AOI21X1 U32 ( .A(1'b1), .B(state_out[3]), .C(reset_latch), .Y(N35) );
+  NAND3X1 U32 ( .A(state_out[3]), .B(n5), .C(1'b1), .Y(N35) );
   NOR2X1 U33 ( .A(n26), .B(n27), .Y(N23) );
   NAND2X1 U34 ( .A(we_reg_in), .B(n_alu_in), .Y(n27) );
   NAND2X1 U35 ( .A(n14), .B(n13), .Y(n26) );
