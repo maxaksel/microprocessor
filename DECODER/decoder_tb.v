@@ -5,6 +5,9 @@ module decoder_tb();
 reg         [15:0] instruction;
 wire [1:0]  alu_op;
 wire [1:0]  ssel;
+wire [2:0]  sr1;
+wire [2:0]  sr2;
+wire [2:0]  dr;
 wire        we_reg;
 wire        branch;
 wire        negative, zero, positive;
@@ -17,7 +20,11 @@ decoder decode (
   .we_reg(we_reg),
   .branch(branch),
   .alu_op(alu_op),
-  .ssel(ssel)
+  .ssel(ssel),
+  .sr1(sr1),
+  .sr2(sr2),
+  .dr(dr),
+  .pc_ctrl_1(pc_ctrl_1)
 ); // create decoder instance
 
 initial
