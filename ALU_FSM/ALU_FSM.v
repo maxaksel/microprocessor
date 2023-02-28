@@ -92,7 +92,7 @@ to the Regfile, since both of them are sequential modules with latches.
     // State output logic
     always @(negedge clkb) begin
         if (reset_latch == 1'b1) begin
-            current_state <= IDLE_PC;
+            current_state <= IDLE_NPC; //  reset to cycle that doesn't update PC so instruction 0 has time to propagate
             pc_ctl_0_out <= 1'b0;
         end else if (we_latch == 1'b1) begin
             if (current_state[3] == 1'b1) begin // if on a NPC Cycle, go to a PC Cycle
