@@ -10,7 +10,7 @@ module REGFILE (
     data_in,
     sr1_out,
     sr2_out,
-    reg0_out,
+    reg0_out
 );
 
 // inputs

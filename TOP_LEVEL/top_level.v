@@ -4,7 +4,7 @@ module top_level (
     reset,
     we_ins,
     load,
-    reg_0_out,
+    reg_0_out
 );
 
 //-----------------Inputs to processor-----------------//

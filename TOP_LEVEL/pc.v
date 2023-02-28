@@ -15,8 +15,8 @@ module PC(clka, clkb, reset, pc_latch_data, pc_ctl, imm, sr1_val, pc_out);
         input [PC_BITS - 1:0] sr1_val; // input value from source reg 1
 
         // output wire
-        output pc_out;
-        wire [PC_BITS - 1:0] pc_out;
+        output wire [PC_BITS - 1:0] pc_out;
+        //wire [PC_BITS - 1:0] pc_out;
 
         
 
