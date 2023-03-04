@@ -38,7 +38,7 @@ def get_negative(binary_string: str, length: int) -> str:
         else:
             new_string += "0"
     plus_one = int(new_string, 2) + 1
-    bin_plus_one = bin(plus_one)[2:]
+    bin_plus_one = bin(plus_one)[2:].zfill(len(new_string))
     return "1" * (length - len(bin_plus_one)) + bin_plus_one
 
 
@@ -87,6 +87,7 @@ def main():
     print("Assembling program.")
     # Translate to machine code
     line_no = 1
+    PC = 0
     for line in assembly_lines:
         if PC > 2**7-1:
             raise Exception ("Program too long!")
@@ -163,7 +164,7 @@ def main():
                 offset = symbol_table[to_branch] - PC
                 pcoffset = bin(offset)
                 if pcoffset[0] == '-':
-                    pcoffset = "1"*(6-len(pcoffset[3:])) + pcoffset[3:]
+                    pcoffset = get_negative(bin(abs(offset))[2:], 6)
                 else:
                     pcoffset = pcoffset[2:].zfill(6)
             else:
