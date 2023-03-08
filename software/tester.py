@@ -1,3 +1,8 @@
+"""
+python tester.py <binary file> -v
+use -v option for verbose where register is printed every step
+"""
+
 import sys
 
 REG_SIZE = 8
@@ -224,8 +229,9 @@ if __name__ == "__main__":
                 n = 1
                 z = 0
                 p = 0
-       
-        print_reg(reg_file)
+        
+        if (verbose):
+            print_reg(reg_file)
         if not br:
             pc += 2
 
@@ -234,5 +240,7 @@ if __name__ == "__main__":
     
     if (pc >= 0):
         print("END OF PROGRAM")
+        if not verbose:
+            print_reg(reg_file)
     else:
         print("[ERROR] PC smaller than zero")
