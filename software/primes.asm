@@ -27,5 +27,5 @@ add $0, $0, $2
 jmp $7				; return address
 :done
 addi $0, $1, #0
-lea $7                		; loop forever
+lea $7 #0             		; loop forever
 jmp $7
