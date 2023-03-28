@@ -45,7 +45,7 @@ def main():
 
     output_file.write(header)
 
-    signal_matrix = np.zeros((18, 32), dtype=np.int8)
+    signal_matrix = np.zeros((18, 64), dtype=np.int8)
     signal_matrix[0, 1] = 1  # initial reset
 
     j = 2
