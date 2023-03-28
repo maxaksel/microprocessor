@@ -39,13 +39,14 @@ R
 def main():
     input_file = sys.argv[1]
     output_file = sys.argv[2]
+    width = int(sys.argv[3])
 
     input_file = open(input_file, 'r')
     output_file = open(output_file, 'w')
 
     output_file.write(header)
 
-    signal_matrix = np.zeros((18, 64), dtype=np.int8)
+    signal_matrix = np.zeros((18, width), dtype=np.int8)
     signal_matrix[0, 1] = 1  # initial reset
 
     j = 2
