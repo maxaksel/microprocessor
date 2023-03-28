@@ -45,11 +45,11 @@ def get_negative(binary_string: str, length: int) -> str:
 def parse_imm(imm: str, imm_length: int, line_no: int) -> str:
     if imm[0] == '#':
         if imm[1] == "-":
-            if int(imm[2:], 2) > 32:
+            if int(imm[2:]) > 32:
                 raise Exception(f"Immediate too large on line {line_no}!")
             return get_negative(bin(int(imm[2:]))[2:], 5)
         else:
-            if int(imm[1:], 2) > 31:
+            if int(imm[1:]) > 31:
                 raise Exception(f"Immediate too large on line {line_no}!")
             return bin(int(imm[1:]))[2:].zfill(imm_length)
     elif imm[0] == 'b':
@@ -93,8 +93,14 @@ def main():
             raise Exception ("Program too long!")
 
         if line == "\n" or line[0] == ";":
+            line_no += 1
             continue
         line = line.replace("\n", "")
+
+        semi_loc = line.find(" ;")
+        if semi_loc != -1:
+            line = line[:semi_loc]
+
         parts = line.split(" ")
 
         if parts[0][0] == ":":
@@ -205,8 +211,14 @@ def main():
 
             dr = parts[1]
             imm = parts[2]
-            pcoffset = parse_imm(imm, 6, line_no)
-            binary_line = opcode_map[opcode] + reg_map[dr] + "000" + pcoffset
+
+            pcoffset = 0
+            if imm[0] == ":":
+                pcoffset = symbol_table[imm] - PC
+                pcoffset = parse_imm("#" + str(pcoffset), 6, line_no)
+            else:
+                pcoffset = parse_imm(imm, 6, line_no)
+            binary_line = opcode_map[opcode] + reg_map[dr] + "000" + str(pcoffset)
 
         else:
             raise Exception(f"Invalid instruction type on line {line_no}!")
