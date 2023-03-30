@@ -6,6 +6,8 @@ use -v option for verbose where register is printed every step
 import sys
 
 REG_SIZE = 8
+max_iterations = 512
+iteration = 0
 
 def sext(bstr, size=REG_SIZE):
     ret = bstr
@@ -71,6 +73,10 @@ if __name__ == "__main__":
     verbose = False
     if (len(sys.argv) > 2 and sys.argv[2] == "-v"):
         verbose = True
+        if (len(sys.argv) > 3):
+            max_iterations = int(sys.argv[3])
+    elif (len(sys.argv) > 2):
+        max_iterations = int(sys.argv[2])
 
     f = open(filename, "r")
     program = []
@@ -92,6 +98,7 @@ if __name__ == "__main__":
     p  = 0
 
     while (pc < len(program) and pc >= 0):
+        iteration = iteration + 1
         # DECODE
         br = False
         if (pc % 2 != 0):
@@ -156,7 +163,7 @@ if __name__ == "__main__":
                 p = 0
         
         elif (opcode == "1001"):  # NOT op-code
-            if cur_instr[10:16] == '':  # NOT
+            if cur_instr[10:16] == '000000':  # NOT
                 reg_file[dr] = NOT(reg_file[sr1])
                 print("[INSTR] $" + str(dr) + " = ~$" + str(sr1))
             elif cur_instr[7:11] == '0001':  # NOTi
@@ -190,9 +197,7 @@ if __name__ == "__main__":
                 offset = int(cur_instr[11:16], 2) - int(cur_instr[10]) * 2**5
                 pc = pc + offset
             print("[INSTR] Branch offset: " + str(offset))
-            n = 0
-            z = 0
-            p = 0
+
 
         elif (opcode == "1100"):  # JMP
             if (cur_instr[4:7] == "000" and cur_instr[10:16] == "000000"):
@@ -202,9 +207,8 @@ if __name__ == "__main__":
             else:
                 print("[ERROR] JMP instruction invalid")
                 break
-            n = 0
-            z = 0
-            p = 0
+
+
 
         elif (opcode == "1110"):  # LEA
             if (cur_instr[7:10] == "000"):
@@ -234,6 +238,8 @@ if __name__ == "__main__":
             print_reg(reg_file)
         if not br:
             pc += 2
+        if (iteration > max_iterations):
+            break 
 
         
         print("********************************")
