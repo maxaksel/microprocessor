@@ -203,6 +203,7 @@ def main():
                 binary_line = opcode_map[opcode] + "000111000000"
 
             else:
+                sr = parts[1]
                 binary_line = opcode_map[opcode] + "000" + reg_map[sr] + "000000"
 
         elif opcode == "lea":
