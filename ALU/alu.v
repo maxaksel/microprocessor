@@ -20,15 +20,15 @@ module ALU (alu_op, source_sel, ins_immediate, pc, reg_sr1_out, reg_sr2_out, neg
 
     parameter ADDI = 4'b0000;
     parameter ADD  = 4'b0010;
-    parameter LEA  = 4'b0001;
+    parameter LEA  = 4'b1101;
     parameter ANDI = 4'b0100;
     parameter AND  = 4'b0110;
     parameter NOTI = 4'b1000;
     parameter NOT  = 4'b1010;
 
-    assign negative = (result <  0);
-    assign zero = (result == 0);
-    assign positive = (result > 0);
+    assign negative = (result[7] == 1'b1);
+    assign zero = (result == 8'b00000000);
+    assign positive = ~(negative | zero);
 
     always @(*) begin
       case ({alu_op, source_sel})
