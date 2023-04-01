@@ -1,4 +1,4 @@
-timestamp 0
+timestamp 1680363874
 version 8.1
 tech scmos
 style AMI0.5um(amic5)from:T11Z
@@ -14,10 +14,10 @@ node "B" 1060 911.4 12 51 p 0 0 0 0 0 0 0 0 0 0 210 204 0 0 0 0 32 24 0 0 0 0
 node "A" 1026 1185.6 2 19 pc 0 0 0 0 0 0 0 0 0 0 204 198 0 0 0 0 32 24 0 0 0 0
 node "vdd" 2466 8002.8 -8 48 nw 32 32 200 90 2280 194 0 0 0 0 0 0 0 0 0 0 340 154 0 0 0 0
 cap "vdd" "Y" 1365.48
-cap "vdd" "A" 126.72
 cap "B" "vdd" 448.44
+cap "A" "vdd" 126.72
+cap "a_9_54#" "Y" 158.4
 cap "B" "Y" 371.52
-cap "Y" "a_9_54#" 158.4
 fet nfet 15 6 16 7 20 24 "Gnd!" "B" 4 0 "Y" 10 0 "gnd" 10 0
 fet nfet 7 6 8 7 20 24 "Gnd!" "A" 4 0 "gnd" 10 0 "Y" 10 0
 fet pfet 12 54 13 55 80 84 "vdd" "B" 4 0 "a_9_54#" 40 0 "Y" 40 0
