@@ -1,4 +1,4 @@
-timestamp 1681593048
+timestamp 1682046639
 version 8.1
 tech scmos
 style AMI0.5um(amic5)from:T11Z
@@ -23,7 +23,7 @@ node "p_load[4]" 0 8104.8 3990 2929 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1600 164 
 node "Gnd!" 0 4896.48 -2218 233 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 832 116 0 0 0 0
 node "p_clkb" 0 5561.85 -2225 1132 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 975 128 0 0 0 0
 node "m1_n1489_1257#" 5 29804.8 -1489 1257 v1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3434 850 170 76 49 28
-node "m1_n1489_202#" 32 326563 -1489 202 v1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3744 846 12230 2280 905417 33750
+node "m1_n1489_202#" 44 457293 -1489 202 v1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3744 846 13203 2896 1178995 44682
 node "Gnd!" 0 9029.64 -2224 2022 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1836 176 0 0 0 0
 node "m1_3007_2099#" 40 203167 3007 2099 v1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 22300 6274 251 94 49 28
 node "m1_3007_2119#" 37 185309 3007 2119 v1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 20327 5716 260 96 49 28
@@ -54,7 +54,7 @@ node "m1_n943_3157#" 22 157670 -943 3157 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2078
 node "p_load[8]" 0 5842.68 -2223 3227 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1012 136 0 0 0 0
 node "m1_n1489_3357#" 25 199163 -1489 3357 v1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 27826 5120 1142 472 0 0
 node "m1_n1243_3140#" 25 179081 -1243 3140 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 23972 4706 1107 458 0 0
-node "m1_n1492_1111#" 23 2.14759e+06 -1492 1111 v1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 70444 2712 1127269 32572 0 0
+node "m1_n1492_1111#" 32 2.68257e+06 -1492 1111 v1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 74188 3174 1374445 41982 0 0
 node "p_load[1]" 0 9358.62 3130 4093 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1938 178 0 0 0 0
 node "p_load[2]" 0 4517.76 2838 4101 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 744 110 0 0 0 0
 node "Vdd!" 0 9174.24 2525 4095 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1856 180 0 0 0 0
@@ -71,52 +71,53 @@ node "p_load[13]" 0 5481.18 -468 4097 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 962 126
 node "p_load[12]" 0 5687.4 -768 4093 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1020 128 0 0 0 0
 node "p_load[14]" 0 6350.22 -1064 4091 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1178 138 0 0 0 0
 node "p_load[0]" 0 5431.2 -1368 4094 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 960 124 0 0 0 0
-cap "m1_1461_2924#" "m1_n1492_1111#" 49487.7
-cap "m1_n1492_1111#" "m1_3007_2099#" 4071
 cap "m1_3007_2149#" "m1_n1492_1111#" 4071
-cap "m1_1725_2924#" "m1_n1489_202#" 2693.52
-cap "m1_1461_2924#" "m1_n1489_202#" 201
-cap "m1_1597_2924#" "m1_n1492_1111#" 17435.1
-cap "m1_859_2920#" "m1_n1492_1111#" 19544.4
-cap "m1_3007_2149#" "m1_n1489_202#" 2693.52
-cap "m1_3007_2099#" "m1_n1489_202#" 5182.8
-cap "m1_n1243_3140#" "m1_n1492_1111#" 18984
-cap "m1_n643_3173#" "m1_n1492_1111#" 18984
-cap "m1_1597_2924#" "m1_n1489_202#" 2693.52
-cap "m1_859_2920#" "m1_n1489_202#" 467.28
-cap "m1_843_2920#" "m1_n1492_1111#" 18784.8
-cap "m1_1893_2924#" "m1_n1492_1111#" 17435.1
 cap "17_17_DI" "m1_n1492_1111#" 21656.1
-cap "m1_2085_2924#" "m1_n1492_1111#" 17435.1
-cap "m1_3007_2119#" "m1_n1492_1111#" 4071
 cap "m1_1893_2924#" "m1_n1489_202#" 2693.52
-cap "17_17_DI" "m1_n1489_202#" 216
-cap "m1_2085_2924#" "m1_n1489_202#" 2693.52
-cap "m1_3007_2119#" "m1_n1489_202#" 5182.8
-cap "m1_1517_2924#" "m1_n1492_1111#" 53268.6
-cap "m1_n943_3157#" "m1_n1492_1111#" 18984
-cap "m1_795_2920#" "m1_n1492_1111#" 53547.3
-cap "m1_811_2920#" "m1_n1492_1111#" 68304.9
-cap "m1_747_2920#" "m1_n1492_1111#" 3908.1
-cap "m1_n1492_1111#" "m1_n1489_202#" 2.75316e+06
-cap "m1_n343_3188#" "m1_n1492_1111#" 3908.1
-cap "m1_1517_2924#" "m1_n1489_202#" 201
-cap "17_17_DI" "17_17_DIB" 487.2
-cap "m1_827_2920#" "m1_n1492_1111#" 86987.1
-cap "m1_n1492_1111#" "m1_n1489_1257#" 3582.3
-cap "m1_n1489_202#" "m1_n1489_1257#" 173.16
 cap "m1_n43_3203#" "m1_n1492_1111#" 3908.1
-cap "m1_891_2920#" "m1_n1492_1111#" 18418.8
 cap "m1_n1489_3357#" "m1_n1492_1111#" 31246.8
+cap "m1_3007_2119#" "m1_n1492_1111#" 4071
+cap "m1_n1243_3140#" "m1_n1492_1111#" 18984
+cap "m1_2085_2924#" "m1_n1489_202#" 2693.52
+cap "m1_257_3218#" "m1_n1492_1111#" 3908.1
+cap "m1_n643_3173#" "m1_n1492_1111#" 18984
+cap "m1_859_2920#" "m1_n1489_202#" 467.28
+cap "m1_n943_3157#" "m1_n1492_1111#" 18984
+cap "m1_3007_2099#" "m1_n1492_1111#" 4071
+cap "m1_891_2920#" "m1_n1492_1111#" 18418.8
+cap "m1_3007_2149#" "m1_n1489_202#" 2693.52
+cap "m1_747_2920#" "m1_n1492_1111#" 3908.1
+cap "17_17_DI" "m1_n1489_202#" 216
+cap "m1_n1489_202#" "m1_n1489_3357#" 2799.24
+cap "m1_1461_2924#" "m1_n1492_1111#" 49487.7
+cap "17_17_DI" "17_17_DIB" 487.2
+cap "m1_3007_2119#" "m1_n1489_202#" 5182.8
+cap "m1_763_2920#" "m1_n1492_1111#" 4476.9
+cap "m1_n1489_202#" "m1_n1492_1111#" 3.53052e+06
+cap "m1_1517_2924#" "m1_n1492_1111#" 53268.6
+cap "m1_3007_2099#" "m1_n1489_202#" 5182.8
 cap "m1_779_2920#" "m1_n1492_1111#" 38892.9
 cap "m1_891_2920#" "m1_n1489_202#" 912.96
-cap "m1_n1489_3357#" "m1_n1489_202#" 2799.24
-cap "m1_763_2920#" "m1_n1492_1111#" 4476.9
-cap "m1_763_2920#" "m1_n1489_202#" 857.52
+cap "m1_n343_3188#" "m1_n1492_1111#" 3908.1
+cap "m1_n1489_1257#" "m1_n1492_1111#" 3582.3
 cap "m1_1533_2924#" "m1_n1492_1111#" 67438.2
-cap "m1_257_3218#" "m1_n1492_1111#" 3908.1
-cap "m1_1533_2924#" "m1_n1489_202#" 201
+cap "m1_795_2920#" "m1_n1492_1111#" 53547.3
+cap "m1_1461_2924#" "m1_n1489_202#" 201
+cap "m1_763_2920#" "m1_n1489_202#" 857.52
+cap "m1_1597_2924#" "m1_n1492_1111#" 17435.1
+cap "m1_811_2920#" "m1_n1492_1111#" 68304.9
+cap "m1_1517_2924#" "m1_n1489_202#" 201
 cap "m1_1725_2924#" "m1_n1492_1111#" 17435.1
+cap "m1_827_2920#" "m1_n1492_1111#" 86987.1
+cap "m1_n1489_1257#" "m1_n1489_202#" 173.16
+cap "m1_1533_2924#" "m1_n1489_202#" 201
+cap "m1_1893_2924#" "m1_n1492_1111#" 17435.1
+cap "m1_843_2920#" "m1_n1492_1111#" 18784.8
+cap "m1_1597_2924#" "m1_n1489_202#" 2693.52
+cap "m1_2085_2924#" "m1_n1492_1111#" 17435.1
+cap "m1_859_2920#" "m1_n1492_1111#" 19544.4
+cap "m1_1725_2924#" "m1_n1489_202#" 2693.52
+cap "PadFrame64_0/17_25/m3_n36_n11#" "PadFrame64_0/17_25/OEN" 1.13687e-13
 cap "PadFrame64_0/17_23/Vdd!" "PadFrame64_0/17_23/GND!" 156.6
 cap "PadFrame64_0/17_23/Vdd!" "PadFrame64_0/17_23/Vdd!" 199.8
 subcap "p_reg_0_out[4]" -4699.44
@@ -126,9 +127,9 @@ subcap "p_reg_0_out[5]" -3643.35
 cap "top_level_0/FILL_3303/vdd" "top_level_0/m2_4167_37#" 3597.6
 cap "top_level_0/FILL_3303/gnd" "top_level_0/m2_4191_13#" 4840.8
 subcap "Gnd!" -2364.06
-subcap "m1_n1489_202#" -326934
-cap "PadFrame64_0/PadBiDir_15/Vdd!" "PadFrame64_0/PadBiDir_15/GND!" 156.6
-subcap "m1_n1489_202#" -311961
+subcap "m1_n1489_202#" -457664
+cap "PadFrame64_0/PadBiDir_15/GND!" "PadFrame64_0/PadBiDir_15/Vdd!" 156.6
+subcap "m1_n1489_202#" -442692
 cap "PadFrame64_0/PadBiDir_15/Vdd!" "PadFrame64_0/PadBiDir_15/Vdd!" 199.8
 subcap "p_reg_0_out[3]" -1876.65
 cap "PadFrame64_0/PadGnd_0/GND!" "m1_n1492_1111#" -3.63798e-12
@@ -138,28 +139,27 @@ subcap "p_reg_0_out[2]" -3481.77
 cap "PadFrame64_0/PadBiDir_17/GND!" "PadFrame64_0/PadBiDir_17/Vdd!" 156.6
 cap "PadFrame64_0/PadBiDir_17/Vdd!" "PadFrame64_0/PadBiDir_17/Vdd!" 199.8
 subcap "p_reg_0_out[6]" -2617.71
-cap "PadFrame64_0/PadBiDir_13/OEN" "PadFrame64_0/PadBiDir_13/Vdd!" 2.84217e-14
-cap "PadFrame64_0/PadBiDir_13/OEN" "PadFrame64_0/PadBiDir_13/m3_n36_n11#" 6.75016e-14
-cap "PadFrame64_0/PadBiDir_18/GND!" "PadFrame64_0/PadBiDir_18/Vdd!" 156.6
-subcap "m1_n1492_1111#" -2.14715e+06
-subcap "m1_n1492_1111#" -2.13324e+06
+cap "PadFrame64_0/PadBiDir_13/Vdd!" "PadFrame64_0/PadBiDir_13/OEN" 2.84217e-14
+cap "PadFrame64_0/PadBiDir_18/Vdd!" "PadFrame64_0/PadBiDir_18/GND!" 156.6
+subcap "m1_n1492_1111#" -2.68213e+06
+subcap "m1_n1492_1111#" -2.66822e+06
 cap "PadFrame64_0/PadBiDir_18/Vdd!" "PadFrame64_0/PadBiDir_18/Vdd!" 199.8
 subcap "p_reg_0_out[0]" -4039.05
 subcap "m1_n1489_1257#" -22601.6
-cap "m1_n1492_1111#" "m1_n1489_202#" -3.63798e-12
+cap "m1_n1489_202#" "m1_n1492_1111#" -3.63798e-12
 cap "PadFrame64_0/PadBiDir_19/GND!" "PadFrame64_0/PadBiDir_19/Vdd!" 156.6
 cap "PadFrame64_0/PadBiDir_19/Vdd!" "PadFrame64_0/PadBiDir_19/Vdd!" 199.8
 subcap "p_reg_0_out[1]" -3351
 cap "top_level_0/m2_4167_37#" "top_level_0/FILL_884/vdd" 3420
-cap "top_level_0/FILL_884/gnd" "top_level_0/m2_4191_13#" 4929.6
+cap "top_level_0/m2_4191_13#" "top_level_0/FILL_884/gnd" 4929.6
 subcap "Gnd!" -2831.7
-cap "PadFrame64_0/17_21/OEN" "PadFrame64_0/17_21/Vdd!" 2.84217e-14
+cap "PadFrame64_0/17_21/Vdd!" "PadFrame64_0/17_21/OEN" 2.84217e-14
 cap "PadFrame64_0/17_21/Vdd!" "PadFrame64_0/17_21/GND!" 156.6
 subcap "m1_3007_2099#" -202267
 subcap "m1_3007_2099#" -194669
 cap "PadFrame64_0/17_21/Vdd!" "PadFrame64_0/17_21/Vdd!" 199.8
 subcap "p_reset" -3451.44
-cap "m1_n1492_1111#" "PadFrame64_0/19_0/GND!" -3.63798e-12
+cap "PadFrame64_0/19_0/GND!" "m1_n1492_1111#" -3.63798e-12
 subcap "m1_3007_2099#" -199356
 subcap "m1_3007_2119#" -181648
 subcap "m1_3007_2149#" -144194
@@ -167,13 +167,13 @@ subcap "m1_3007_2099#" -199305
 subcap "m1_3007_2119#" -177260
 subcap "m1_3007_2149#" -142145
 cap "PadFrame64_0/17_20/Vdd!" "PadFrame64_0/17_20/OEN" 2.84217e-14
-cap "PadFrame64_0/17_20/GND!" "PadFrame64_0/17_20/Vdd!" 156.6
+cap "PadFrame64_0/17_20/Vdd!" "PadFrame64_0/17_20/GND!" 156.6
 cap "PadFrame64_0/17_20/Vdd!" "PadFrame64_0/17_20/Vdd!" 199.8
 subcap "p_clka" -2885.67
 cap "PadFrame64_0/17_19/Vdd!" "PadFrame64_0/17_19/GND!" 156.6
 cap "PadFrame64_0/17_19/Vdd!" "PadFrame64_0/17_19/Vdd!" 199.8
 subcap "p_reg_0_out[7]" -2264.34
-cap "PadFrame64_0/17_18/Vdd!" "PadFrame64_0/17_18/OEN" 2.84217e-14
+cap "PadFrame64_0/17_18/OEN" "PadFrame64_0/17_18/Vdd!" 2.84217e-14
 cap "PadFrame64_0/17_18/GND!" "PadFrame64_0/17_18/Vdd!" 156.6
 subcap "m1_795_2920#" -94637.1
 subcap "m1_779_2920#" -72871.3
@@ -199,33 +199,32 @@ subcap "m1_2085_2924#" -258624
 cap "PadFrame64_0/17_18/Vdd!" "PadFrame64_0/17_18/Vdd!" 199.8
 subcap "p_load[4]" -2146.92
 cap "PadFrame64_0/17_17/m3_n36_n11#" "PadFrame64_0/17_18/DI" 9.6
-cap "PadFrame64_0/17_9/OEN" "PadFrame64_0/17_9/Vdd!" 2.84217e-14
-cap "PadFrame64_0/17_9/OEN" "PadFrame64_0/17_9/m3_n36_n11#" 6.75016e-14
-cap "PadFrame64_0/17_9/OEN" "m1_n1492_1111#" 3.63798e-12
+cap "m1_n1492_1111#" "PadFrame64_0/17_9/OEN" 3.63798e-12
+cap "PadFrame64_0/17_9/Vdd!" "PadFrame64_0/17_9/OEN" 2.84217e-14
 cap "PadFrame64_0/17_17/OEN" "PadFrame64_0/17_17/Vdd!" 2.84217e-14
-cap "PadFrame64_0/17_17/Vdd!" "PadFrame64_0/17_17/GND!" 156.6
+cap "PadFrame64_0/17_17/GND!" "PadFrame64_0/17_17/Vdd!" 156.6
 cap "PadFrame64_0/17_17/Vdd!" "PadFrame64_0/17_17/Vdd!" 199.8
 subcap "p_we_ins" -1868.88
 subcap "m1_n1489_3357#" -188779
-cap "PadFrame64_0/17_9/Vdd!" "PadFrame64_0/17_0/OEN" 2.84217e-14
+cap "PadFrame64_0/17_0/OEN" "PadFrame64_0/17_9/Vdd!" 2.84217e-14
 cap "PadFrame64_0/17_0/Vdd!" "PadFrame64_0/17_1/OEN" 2.84217e-14
-cap "PadFrame64_0/17_1/DI" "PadFrame64_0/17_2/m3_n36_n11#" 9.6
+cap "PadFrame64_0/17_2/m3_n36_n11#" "PadFrame64_0/17_1/DI" 9.6
 cap "PadFrame64_0/17_2/OEN" "PadFrame64_0/17_1/Vdd!" 2.84217e-14
 cap "PadFrame64_0/17_3/m3_n36_n11#" "PadFrame64_0/17_2/DI" 9.6
 cap "PadFrame64_0/17_3/OEN" "PadFrame64_0/17_2/Vdd!" 2.84217e-14
 cap "PadFrame64_0/17_3/DI" "PadFrame64_0/17_4/m3_n36_n11#" 9.6
-cap "PadFrame64_0/17_3/Vdd!" "PadFrame64_0/17_4/OEN" 2.84217e-14
+cap "PadFrame64_0/17_4/OEN" "PadFrame64_0/17_3/Vdd!" 2.84217e-14
 cap "PadFrame64_0/17_4/DI" "PadFrame64_0/17_5/m3_n36_n11#" 9.6
-cap "PadFrame64_0/17_4/Vdd!" "PadFrame64_0/17_5/OEN" 2.84217e-14
-cap "PadFrame64_0/18_0/Vdd!" "PadFrame64_0/17_6/OEN" 2.84217e-14
+cap "PadFrame64_0/17_5/OEN" "PadFrame64_0/17_4/Vdd!" 2.84217e-14
+cap "PadFrame64_0/17_6/OEN" "PadFrame64_0/18_0/Vdd!" 2.84217e-14
 cap "PadFrame64_0/17_7/OEN" "PadFrame64_0/17_6/Vdd!" 2.84217e-14
 cap "PadFrame64_0/17_7/Vdd!" "PadFrame64_0/17_8/OEN" 2.84217e-14
-cap "PadFrame64_0/PadBiDir_0/m3_n36_n11#" "PadFrame64_0/17_8/DI" 9.6
-cap "PadFrame64_0/PadBiDir_0/OEN" "PadFrame64_0/17_8/Vdd!" 2.84217e-14
-cap "PadFrame64_0/PadBiDir_1/OEN" "PadFrame64_0/PadBiDir_0/Vdd!" 2.84217e-14
+cap "PadFrame64_0/17_8/DI" "PadFrame64_0/PadBiDir_0/m3_n36_n11#" 9.6
+cap "PadFrame64_0/17_8/Vdd!" "PadFrame64_0/PadBiDir_0/OEN" 2.84217e-14
+cap "PadFrame64_0/PadBiDir_0/Vdd!" "PadFrame64_0/PadBiDir_1/OEN" 2.84217e-14
 cap "PadFrame64_0/PadBiDir_2/OEN" "PadFrame64_0/PadBiDir_1/Vdd!" 2.84217e-14
 cap "PadFrame64_0/PadVdd_0/Vdd!" "PadFrame64_0/PadBiDir_3/OEN" 2.84217e-14
-cap "PadFrame64_0/PadBiDir_4/OEN" "PadFrame64_0/PadBiDir_3/Vdd!" 2.84217e-14
+cap "PadFrame64_0/PadBiDir_3/Vdd!" "PadFrame64_0/PadBiDir_4/OEN" 2.84217e-14
 subcap "17_17_DIB" -156.6
 subcap "p_load[0]" -1562.7
 subcap "p_load[14]" -1495.5
@@ -252,6 +251,88 @@ merge "top_level_0/reg_0_out[2]" "PadFrame64_0/PadBiDir_16/DO" -621.84 0 0 0 0 0
 merge "PadFrame64_0/PadBiDir_16/DO" "m1_2085_2924#"
 merge "PadFrame64_0/17_4/hack" "p_load[9]" -18080.2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3958 -317 0 0 0 0
 merge "PadFrame64_0/17_17/DIB" "17_17_DIB" -1038.48 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -117 -50 0 0
+merge "PadFrame64_0/PadBiDir_4/GND!" "PadFrame64_0/PadBiDir_4/OEN" -90824.2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -6510 -1234 -1763 -1006 -126723 -2987
+merge "PadFrame64_0/PadBiDir_4/OEN" "PadFrame64_0/PadBiDir_3/GND!"
+merge "PadFrame64_0/PadBiDir_3/GND!" "PadFrame64_0/PadBiDir_3/OEN"
+merge "PadFrame64_0/PadBiDir_3/OEN" "PadFrame64_0/PadBiDir_2/GND!"
+merge "PadFrame64_0/PadBiDir_2/GND!" "PadFrame64_0/PadBiDir_2/OEN"
+merge "PadFrame64_0/PadBiDir_2/OEN" "PadFrame64_0/PadBiDir_1/GND!"
+merge "PadFrame64_0/PadBiDir_1/GND!" "PadFrame64_0/PadBiDir_1/OEN"
+merge "PadFrame64_0/PadBiDir_1/OEN" "PadFrame64_0/PadBiDir_0/GND!"
+merge "PadFrame64_0/PadBiDir_0/GND!" "PadFrame64_0/PadBiDir_0/OEN"
+merge "PadFrame64_0/PadBiDir_0/OEN" "PadFrame64_0/17_8/GND!"
+merge "PadFrame64_0/17_8/GND!" "PadFrame64_0/17_8/OEN"
+merge "PadFrame64_0/17_8/OEN" "PadFrame64_0/17_7/GND!"
+merge "PadFrame64_0/17_7/GND!" "PadFrame64_0/17_7/OEN"
+merge "PadFrame64_0/17_7/OEN" "PadFrame64_0/17_6/GND!"
+merge "PadFrame64_0/17_6/GND!" "PadFrame64_0/17_6/OEN"
+merge "PadFrame64_0/17_6/OEN" "PadFrame64_0/17_5/GND!"
+merge "PadFrame64_0/17_5/GND!" "PadFrame64_0/17_5/OEN"
+merge "PadFrame64_0/17_5/OEN" "PadFrame64_0/17_4/GND!"
+merge "PadFrame64_0/17_4/GND!" "PadFrame64_0/17_4/OEN"
+merge "PadFrame64_0/17_4/OEN" "PadFrame64_0/17_3/GND!"
+merge "PadFrame64_0/17_3/GND!" "PadFrame64_0/17_3/OEN"
+merge "PadFrame64_0/17_3/OEN" "PadFrame64_0/17_2/GND!"
+merge "PadFrame64_0/17_2/GND!" "PadFrame64_0/17_2/OEN"
+merge "PadFrame64_0/17_2/OEN" "PadFrame64_0/17_1/GND!"
+merge "PadFrame64_0/17_1/GND!" "PadFrame64_0/17_1/OEN"
+merge "PadFrame64_0/17_1/OEN" "PadFrame64_0/17_0/GND!"
+merge "PadFrame64_0/17_0/GND!" "PadFrame64_0/17_0/OEN"
+merge "PadFrame64_0/17_0/OEN" "PadFrame64_0/17_17/OEN"
+merge "PadFrame64_0/17_17/OEN" "PadFrame64_0/17_17/GND!"
+merge "PadFrame64_0/17_17/GND!" "PadFrame64_0/17_9/OEN"
+merge "PadFrame64_0/17_9/OEN" "PadFrame64_0/17_9/GND!"
+merge "PadFrame64_0/17_9/GND!" "PadFrame64_0/17_18/OEN"
+merge "PadFrame64_0/17_18/OEN" "PadFrame64_0/17_18/GND!"
+merge "PadFrame64_0/17_18/GND!" "PadFrame64_0/17_10/OEN"
+merge "PadFrame64_0/17_10/OEN" "PadFrame64_0/17_19/GND!"
+merge "PadFrame64_0/17_19/GND!" "PadFrame64_0/17_11/OEN"
+merge "PadFrame64_0/17_11/OEN" "PadFrame64_0/17_20/OEN"
+merge "PadFrame64_0/17_20/OEN" "PadFrame64_0/17_20/GND!"
+merge "PadFrame64_0/17_20/GND!" "PadFrame64_0/17_12/OEN"
+merge "PadFrame64_0/17_12/OEN" "PadFrame64_0/17_21/OEN"
+merge "PadFrame64_0/17_21/OEN" "PadFrame64_0/17_21/GND!"
+merge "PadFrame64_0/17_21/GND!" "PadFrame64_0/19_0/GND!"
+merge "PadFrame64_0/19_0/GND!" "top_level_0/FILL_884/gnd"
+merge "top_level_0/FILL_884/gnd" "PadFrame64_0/19_1/GND!"
+merge "PadFrame64_0/19_1/GND!" "PadFrame64_0/PadBiDir_19/GND!"
+merge "PadFrame64_0/PadBiDir_19/GND!" "PadFrame64_0/PadBiDir_18/GND!"
+merge "PadFrame64_0/PadBiDir_18/GND!" "PadFrame64_0/PadBiDir_13/OEN"
+merge "PadFrame64_0/PadBiDir_13/OEN" "PadFrame64_0/PadBiDir_13/GND!"
+merge "PadFrame64_0/PadBiDir_13/GND!" "PadFrame64_0/PadBiDir_17/GND!"
+merge "PadFrame64_0/PadBiDir_17/GND!" "PadFrame64_0/PadBiDir_12/OEN"
+merge "PadFrame64_0/PadBiDir_12/OEN" "PadFrame64_0/PadBiDir_16/GND!"
+merge "PadFrame64_0/PadBiDir_16/GND!" "PadFrame64_0/PadBiDir_11/OEN"
+merge "PadFrame64_0/PadBiDir_11/OEN" "PadFrame64_0/PadBiDir_15/GND!"
+merge "PadFrame64_0/PadBiDir_15/GND!" "PadFrame64_0/PadGnd_0/GND!"
+merge "PadFrame64_0/PadGnd_0/GND!" "PadFrame64_0/PadBiDir_10/OEN"
+merge "PadFrame64_0/PadBiDir_10/OEN" "top_level_0/FILL_3303/gnd"
+merge "top_level_0/FILL_3303/gnd" "PadFrame64_0/PadGnd_1/GND!"
+merge "PadFrame64_0/PadGnd_1/GND!" "top_level_0/m2_4167_37#"
+merge "top_level_0/m2_4167_37#" "PadFrame64_0/17_22/GND!"
+merge "PadFrame64_0/17_22/GND!" "PadFrame64_0/17_14/OEN"
+merge "PadFrame64_0/17_14/OEN" "PadFrame64_0/17_23/GND!"
+merge "PadFrame64_0/17_23/GND!" "PadFrame64_0/17_15/OEN"
+merge "PadFrame64_0/17_15/OEN" "PadFrame64_0/17_24/OEN"
+merge "PadFrame64_0/17_24/OEN" "PadFrame64_0/17_16/OEN"
+merge "PadFrame64_0/17_16/OEN" "PadFrame64_0/17_34/OEN"
+merge "PadFrame64_0/17_34/OEN" "PadFrame64_0/PadBiDir_9/OEN"
+merge "PadFrame64_0/PadBiDir_9/OEN" "PadFrame64_0/PadBiDir_8/OEN"
+merge "PadFrame64_0/PadBiDir_8/OEN" "PadFrame64_0/PadBiDir_7/OEN"
+merge "PadFrame64_0/PadBiDir_7/OEN" "PadFrame64_0/PadBiDir_6/OEN"
+merge "PadFrame64_0/PadBiDir_6/OEN" "PadFrame64_0/PadBiDir_5/OEN"
+merge "PadFrame64_0/PadBiDir_5/OEN" "PadFrame64_0/17_35/OEN"
+merge "PadFrame64_0/17_35/OEN" "PadFrame64_0/17_33/OEN"
+merge "PadFrame64_0/17_33/OEN" "PadFrame64_0/17_32/OEN"
+merge "PadFrame64_0/17_32/OEN" "PadFrame64_0/17_31/OEN"
+merge "PadFrame64_0/17_31/OEN" "PadFrame64_0/17_30/OEN"
+merge "PadFrame64_0/17_30/OEN" "PadFrame64_0/17_29/OEN"
+merge "PadFrame64_0/17_29/OEN" "PadFrame64_0/17_28/OEN"
+merge "PadFrame64_0/17_28/OEN" "PadFrame64_0/17_27/OEN"
+merge "PadFrame64_0/17_27/OEN" "PadFrame64_0/17_26/OEN"
+merge "PadFrame64_0/17_26/OEN" "PadFrame64_0/17_25/OEN"
+merge "PadFrame64_0/17_25/OEN" "m1_n1489_202#"
+merge "m1_n1489_202#" "Gnd!"
 merge "PadFrame64_0/PadBiDir_4/Vdd!" "PadFrame64_0/PadBiDir_3/Vdd!" -17599.4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3539 -348 0 0 0 0
 merge "PadFrame64_0/PadBiDir_3/Vdd!" "PadFrame64_0/PadVdd_0/Vdd!"
 merge "PadFrame64_0/PadVdd_0/Vdd!" "PadFrame64_0/PadBiDir_2/Vdd!"
@@ -290,65 +371,11 @@ merge "PadFrame64_0/PadBiDir_15/OEN" "PadFrame64_0/17_22/Vdd!"
 merge "PadFrame64_0/17_22/Vdd!" "PadFrame64_0/17_22/OEN"
 merge "PadFrame64_0/17_22/OEN" "PadFrame64_0/17_23/Vdd!"
 merge "PadFrame64_0/17_23/Vdd!" "PadFrame64_0/17_23/OEN"
-merge "PadFrame64_0/17_23/OEN" "m1_n1492_1111#"
+merge "PadFrame64_0/17_23/OEN" "PadFrame64_0/PadVdd_1/Vdd!"
+merge "PadFrame64_0/PadVdd_1/Vdd!" "PadFrame64_0/18_1/Vdd!"
+merge "PadFrame64_0/18_1/Vdd!" "m1_n1492_1111#"
 merge "m1_n1492_1111#" "Vdd!"
 merge "PadFrame64_0/PadBiDir_3/hack" "p_load[2]" -4431.27 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -713 -110 0 0 0 0
-merge "PadFrame64_0/PadBiDir_4/GND!" "PadFrame64_0/PadBiDir_4/OEN" -88781.1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -6510 -1234 -1715 -918 -126723 -2987
-merge "PadFrame64_0/PadBiDir_4/OEN" "PadFrame64_0/PadBiDir_3/GND!"
-merge "PadFrame64_0/PadBiDir_3/GND!" "PadFrame64_0/PadBiDir_3/OEN"
-merge "PadFrame64_0/PadBiDir_3/OEN" "PadFrame64_0/PadBiDir_2/GND!"
-merge "PadFrame64_0/PadBiDir_2/GND!" "PadFrame64_0/PadBiDir_2/OEN"
-merge "PadFrame64_0/PadBiDir_2/OEN" "PadFrame64_0/PadBiDir_1/GND!"
-merge "PadFrame64_0/PadBiDir_1/GND!" "PadFrame64_0/PadBiDir_1/OEN"
-merge "PadFrame64_0/PadBiDir_1/OEN" "PadFrame64_0/PadBiDir_0/GND!"
-merge "PadFrame64_0/PadBiDir_0/GND!" "PadFrame64_0/PadBiDir_0/OEN"
-merge "PadFrame64_0/PadBiDir_0/OEN" "PadFrame64_0/17_8/GND!"
-merge "PadFrame64_0/17_8/GND!" "PadFrame64_0/17_8/OEN"
-merge "PadFrame64_0/17_8/OEN" "PadFrame64_0/17_7/GND!"
-merge "PadFrame64_0/17_7/GND!" "PadFrame64_0/17_7/OEN"
-merge "PadFrame64_0/17_7/OEN" "PadFrame64_0/17_6/GND!"
-merge "PadFrame64_0/17_6/GND!" "PadFrame64_0/17_6/OEN"
-merge "PadFrame64_0/17_6/OEN" "PadFrame64_0/17_5/GND!"
-merge "PadFrame64_0/17_5/GND!" "PadFrame64_0/17_5/OEN"
-merge "PadFrame64_0/17_5/OEN" "PadFrame64_0/17_4/GND!"
-merge "PadFrame64_0/17_4/GND!" "PadFrame64_0/17_4/OEN"
-merge "PadFrame64_0/17_4/OEN" "PadFrame64_0/17_3/GND!"
-merge "PadFrame64_0/17_3/GND!" "PadFrame64_0/17_3/OEN"
-merge "PadFrame64_0/17_3/OEN" "PadFrame64_0/17_2/GND!"
-merge "PadFrame64_0/17_2/GND!" "PadFrame64_0/17_2/OEN"
-merge "PadFrame64_0/17_2/OEN" "PadFrame64_0/17_1/GND!"
-merge "PadFrame64_0/17_1/GND!" "PadFrame64_0/17_1/OEN"
-merge "PadFrame64_0/17_1/OEN" "PadFrame64_0/17_0/GND!"
-merge "PadFrame64_0/17_0/GND!" "PadFrame64_0/17_0/OEN"
-merge "PadFrame64_0/17_0/OEN" "PadFrame64_0/17_17/OEN"
-merge "PadFrame64_0/17_17/OEN" "PadFrame64_0/17_17/GND!"
-merge "PadFrame64_0/17_17/GND!" "PadFrame64_0/17_9/OEN"
-merge "PadFrame64_0/17_9/OEN" "PadFrame64_0/17_9/GND!"
-merge "PadFrame64_0/17_9/GND!" "PadFrame64_0/17_18/OEN"
-merge "PadFrame64_0/17_18/OEN" "PadFrame64_0/17_18/GND!"
-merge "PadFrame64_0/17_18/GND!" "PadFrame64_0/17_19/GND!"
-merge "PadFrame64_0/17_19/GND!" "PadFrame64_0/17_20/OEN"
-merge "PadFrame64_0/17_20/OEN" "PadFrame64_0/17_20/GND!"
-merge "PadFrame64_0/17_20/GND!" "PadFrame64_0/17_21/OEN"
-merge "PadFrame64_0/17_21/OEN" "PadFrame64_0/17_21/GND!"
-merge "PadFrame64_0/17_21/GND!" "PadFrame64_0/19_0/GND!"
-merge "PadFrame64_0/19_0/GND!" "top_level_0/FILL_884/gnd"
-merge "top_level_0/FILL_884/gnd" "PadFrame64_0/19_1/GND!"
-merge "PadFrame64_0/19_1/GND!" "PadFrame64_0/PadBiDir_19/GND!"
-merge "PadFrame64_0/PadBiDir_19/GND!" "PadFrame64_0/PadBiDir_18/GND!"
-merge "PadFrame64_0/PadBiDir_18/GND!" "PadFrame64_0/PadBiDir_13/OEN"
-merge "PadFrame64_0/PadBiDir_13/OEN" "PadFrame64_0/PadBiDir_13/GND!"
-merge "PadFrame64_0/PadBiDir_13/GND!" "PadFrame64_0/PadBiDir_17/GND!"
-merge "PadFrame64_0/PadBiDir_17/GND!" "PadFrame64_0/PadBiDir_16/GND!"
-merge "PadFrame64_0/PadBiDir_16/GND!" "PadFrame64_0/PadBiDir_15/GND!"
-merge "PadFrame64_0/PadBiDir_15/GND!" "PadFrame64_0/PadGnd_0/GND!"
-merge "PadFrame64_0/PadGnd_0/GND!" "top_level_0/FILL_3303/gnd"
-merge "top_level_0/FILL_3303/gnd" "PadFrame64_0/PadGnd_1/GND!"
-merge "PadFrame64_0/PadGnd_1/GND!" "top_level_0/m2_4167_37#"
-merge "top_level_0/m2_4167_37#" "PadFrame64_0/17_22/GND!"
-merge "PadFrame64_0/17_22/GND!" "PadFrame64_0/17_23/GND!"
-merge "PadFrame64_0/17_23/GND!" "m1_n1489_202#"
-merge "m1_n1489_202#" "Gnd!"
 merge "PadFrame64_0/17_4/DI" "top_level_0/load[9]" -1121.28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -102 -56 0 0
 merge "top_level_0/load[9]" "m1_n43_3203#"
 merge "PadFrame64_0/17_5/hack" "p_load[7]" -9698.52 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2028 -182 0 0 0 0
@@ -376,12 +403,12 @@ merge "top_level_0/clkb" "m1_n1489_1257#"
 merge "top_level_0/reg_0_out[6]" "PadFrame64_0/PadBiDir_17/DO" -604.56 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -9 -34 0 0
 merge "PadFrame64_0/PadBiDir_17/DO" "m1_1893_2924#"
 merge "PadFrame64_0/PadBiDir_1/hack" "p_load[6]" -9536.22 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1938 -186 0 0 0 0
+merge "top_level_0/reg_0_out[7]" "PadFrame64_0/17_19/DO" -34387.3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3570 -1068 -39 -38 0 0
+merge "PadFrame64_0/17_19/DO" "m1_1461_2924#"
 merge "top_level_0/reg_0_out[0]" "PadFrame64_0/PadBiDir_18/DO" -669.6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -30 -36 0 0
 merge "PadFrame64_0/PadBiDir_18/DO" "m1_1725_2924#"
 merge "top_level_0/reg_0_out[1]" "PadFrame64_0/PadBiDir_19/DO" -621.84 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -21 -34 0 0
 merge "PadFrame64_0/PadBiDir_19/DO" "m1_1597_2924#"
-merge "top_level_0/reg_0_out[7]" "PadFrame64_0/17_19/DO" -34387.3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3570 -1068 -39 -38 0 0
-merge "PadFrame64_0/17_19/DO" "m1_1461_2924#"
 merge "PadFrame64_0/17_21/hack" "p_reset" -10594.6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1824 -248 0 0 0 0
 merge "PadFrame64_0/17_7/DI" "top_level_0/load[10]" -29729.3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4130 -770 -96 -56 0 0
 merge "top_level_0/load[10]" "m1_763_2920#"
